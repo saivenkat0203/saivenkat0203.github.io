@@ -1,10 +1,15 @@
 body {
     padding:0;
-    margin:0
+    margin:0;
+    background-image: url('../images/bg2.jpeg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 .wrapper {
     display: flex;
+    flex-direction: row;
 }
 
 nav {
@@ -47,53 +52,37 @@ nav {
 
 h1 {
     font-family: "Andada Pro", serif;
-    padding: 0;
-    font-size: 100px;
+    font-size: 80px;
     text-align: center;
-}
-
-.container {
-    background-image: url('../images/bg2.jpeg');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    justify-content: center;
-    align-items: center;
-}
-
-.images {
-    display: flex;
-    flex-wrap: wrap;
-    list-style: none;
-}
-
-.images li {
-    height: 40vh;
-    flex-grow: 1;
-    padding: 1em;
-}
-
-.images li:last-child {
-    flex-grow: 10;
-}
-
-.images img {
-    max-height: 100%;
-    min-width: 100%;
-    object-fit: cover;
-    vertical-align: bottom;
-}
-
-.images img:hover {
-    position: relative;
-    transform: scale(1);
-    display: inline-block;
-    border: solid 0.6em midnightblue;
+    flex: 0 0 100%;
 }
 
 .active {
     font-style: italic;
     color: red !important;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.child {
+    padding: 1em;
+    border: 0.5em solid midnightblue;
+    margin: 4px;
+}
+
+.child img {
+    width: 25em;
+    height: 25em;
+}
+
+.child img:hover {
+    transform: scale(1);
+    border: 0.5em solid gold;
 }
 
 @media screen and (max-width: 1300px) {
